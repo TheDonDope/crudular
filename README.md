@@ -5,6 +5,7 @@ This project was generated with [angular-cli](https://github.com/angular/angular
 It uses the following npm packages (version numbers current as of 2016-10-10):
 
 - [Bootstrap 4.0.0-alpha.4](https://www.npmjs.com/package/bootstrap): Used for the SCSS styling of the application
+- [Font-Awesome 4.6.3](https://www.npmjs.com/package/font-awesome): Used as the glyphicon font of the application
 
 ## Development server
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
