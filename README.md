@@ -12,7 +12,17 @@ It uses the following npm packages (version numbers current as of 2016-10-10):
 
 It follows the [Official Angular Styleguide](https://angular.io/styleguide).
 
+## Features
+
+The application provides the following features:
+
+- Provide a login view to authenticate with a remote api
+- Manage a JWT authenticity token to use for calls of protected remote api methods
+- Provide a home view showing the user information about his JWT token
+- Provide a dynamic authentication-based navigation
+
 ## Development server
+
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding

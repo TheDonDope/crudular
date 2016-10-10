@@ -1,0 +1,6 @@
+<nav class="navbar navbar-dark bg-primary">
+  <a class="navbar-brand" [routerLink]="['']"><i class="fa fa-fw fa-home"></i> Crudular</a>
+  <div class="nav navbar-nav" [hidden]="!isUserLoggedIn()">
+    <a class="nav-item nav-link" [routerLink]="['/login']" (click)="onLogoutUser()"><i class="fa fa-fw fa-sign-out" aria-hidden="true"></i> Logout</a>
+  </div>
+</nav>

@@ -1,8 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-const AppRoutes: Routes = [
+import { HomeRoutes } from './home/';
+import { LoginRoutes } from './login/';
 
+const AppRoutes: Routes = [
+  ...HomeRoutes,
+  ...LoginRoutes
 ];
 
 /**
