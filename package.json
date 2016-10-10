@@ -8,7 +8,10 @@
     "lint": "tslint \"src/**/*.ts\"",
     "test": "ng test",
     "pree2e": "webdriver-manager update",
-    "e2e": "protractor"
+    "e2e": "protractor",
+    "bump-version": "conventional-recommended-bump",
+    "changelog": "standard-changelog",
+    "github-release": "conventional-github-releaser -p angular -r 0"
   },
   "private": true,
   "dependencies": {
