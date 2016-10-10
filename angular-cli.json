@@ -15,9 +15,16 @@
       "prefix": "cru",
       "mobile": false,
       "styles": [
-        "styles.scss"
+        "styles.scss",
+        "../node_modules/bootstrap/scss/bootstrap.scss",
+        "../node_modules/font-awesome/scss/font-awesome.scss"
       ],
-      "scripts": [],
+      "scripts": [
+        "../node_modules/jquery/dist/jquery.js",
+        "../node_modules/tether/dist/js/tether.js",
+        "../node_modules/bootstrap/dist/js/bootstrap.js",
+        "../node_modules/moment/moment.js"
+      ],
       "environments": {
         "source": "environments/environment.ts",
         "dev": "environments/environment.ts",

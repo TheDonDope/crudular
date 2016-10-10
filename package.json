@@ -1,6 +1,6 @@
 {
   "name": "crudular",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "license": "MIT",
   "angular-cli": {},
   "scripts": {
@@ -8,7 +8,10 @@
     "lint": "tslint \"src/**/*.ts\"",
     "test": "ng test",
     "pree2e": "webdriver-manager update",
-    "e2e": "protractor"
+    "e2e": "protractor",
+    "bump-version": "conventional-recommended-bump",
+    "changelog": "standard-changelog",
+    "github-release": "conventional-github-releaser -p angular -r 0"
   },
   "private": true,
   "dependencies": {
@@ -20,7 +23,10 @@
     "@angular/platform-browser": "~2.0.0",
     "@angular/platform-browser-dynamic": "~2.0.0",
     "@angular/router": "~3.0.0",
+    "bootstrap": "^4.0.0-alpha.4",
     "core-js": "^2.4.1",
+    "font-awesome": "^4.6.3",
+    "moment": "^2.15.1",
     "rxjs": "5.0.0-beta.12",
     "ts-helpers": "^1.1.1",
     "zone.js": "^0.6.23"
