@@ -1,0 +1,18 @@
+version: '2'
+
+services:
+
+  dist-build:
+    container_name: dist-build
+    image: dist-build
+    build:
+      context: .
+      dockerfile: ./.docker/dist-build.development.dockerfile
+    ports:
+      - '4200:4200'
+    networks:
+      - dist-network
+
+networks:
+  dist-network:
+    driver: bridge
