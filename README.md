@@ -1,3 +1,5 @@
+![Crudular](crudular.png)
+
 # Crudular
 
 [![Angular Style Guide](https://mgechev.github.io/angular2-style-guide/images/badge.svg)](https://angular.io/styleguide)
