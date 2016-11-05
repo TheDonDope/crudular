@@ -2,17 +2,18 @@ version: '2'
 
 services:
 
-  dist-build:
-    container_name: dist-build
-    image: dist-build
+  crudular-angular:
     build:
       context: .
-      dockerfile: ./.docker/dist-build.development.dockerfile
+      dockerfile: ./.docker/crudular-angular.development.dockerfile
+    command: ng serve --host 0.0.0.0 --port 4200
+    container_name: crudular-angular-serve-dev
+    image: crudular-angular
+    networks:
+      - dev-network
     ports:
       - '4200:4200'
-    networks:
-      - dist-network
 
 networks:
-  dist-network:
+  dev-network:
     driver: bridge

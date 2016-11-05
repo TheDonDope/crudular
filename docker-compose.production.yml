@@ -2,31 +2,33 @@ version: '2'
 
 services:
 
-  dist-build:
-    container_name: dist-build
-    image: dist-build
+  crudular-angular:
     build:
       context: .
-      dockerfile: ./.docker/dist-build.production.dockerfile
-    ports:
-      - '4200:4200'
+      dockerfile: ./.docker/crudular-angular.production.dockerfile
+    command: ng build --prod
+    container_name: crudular-angular-build-prod
+    image: crudular-angular
     networks:
-      - dist-network
-
-  nginx:
-    container_name: nginx
-    image: nginx
+      - prod-network
     volumes:
-     - ./.docker/nginx.conf:/etc/nginx/conf.d/crudular.template
-    ports:
-     - "8080:80"
+      - ./dist:/home/app/crudular/dist
+
+  crudular-nginx:
+    command: /bin/bash -c "envsubst '$$NGINX_HOST $$NGINX_PORT' < /etc/nginx/conf.d/crudular.template > /etc/nginx/conf.d/default.conf && nginx -g 'daemon off;'"
+    container_name: crudular-nginx
     environment:
      - NGINX_HOST=localhost
      - NGINX_PORT=80
-    command: /bin/bash -c "envsubst '$$NGINX_HOST $$NGINX_PORT' < /etc/nginx/conf.d/crudular.template > /etc/nginx/conf.d/default.conf && nginx -g 'daemon off;'"
+    image: nginx
     networks:
-      - dist-network
+      - prod-network
+    ports:
+     - "8080:80"
+    volumes:
+     - ./.docker/nginx.conf:/etc/nginx/conf.d/crudular.template
+     - ./dist:/var/www/dist/prod
 
 networks:
-  dist-network:
+  prod-network:
     driver: bridge

@@ -1,4 +1,5 @@
-FROM node:6.6
+FROM node
+MAINTAINER Christian Dobert <idontreallyneedthese@gmail.com>
 
 # prepare a user which runs everything locally! - required in child images!
 RUN useradd --user-group --create-home --shell /bin/false app
@@ -6,7 +7,7 @@ RUN useradd --user-group --create-home --shell /bin/false app
 ENV HOME=/home/app
 WORKDIR $HOME
 
-RUN npm install -g angular-cli@1.0.0-beta.18 && npm cache clean
+RUN npm cache clean && npm install -g angular-cli
 
 ENV APP_NAME=crudular
 
@@ -18,7 +19,4 @@ RUN chown -R app:app $HOME/*
 USER app
 WORKDIR $HOME/$APP_NAME
 
-RUN npm install &&\
-  npm cache clean
-
-CMD ["ng", "serve", "--prod", "--host", "0.0.0.0", "--port", "4200"]
+RUN npm cache clean && npm install

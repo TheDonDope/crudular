@@ -22,6 +22,7 @@ The application provides the following features:
 - Manage a JWT authenticity token to use for calls of protected remote api methods
 - Provide a home view showing the user information about his JWT token
 - Provide a dynamic authentication-based navigation
+- Provides full Docker support for both development and production environment
 
 ## Development server
 
@@ -34,6 +35,40 @@ Run `ng generate component component-name` to generate a new component. You can 
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+
+## Dockerization
+
+The application provides full Docker support. You can use it for both development as well as production builds and deployments.
+
+### How to build and start the dockerized version of the application 
+
+The Dockerization infrastructure is described in the `docker-compose.yml` (respectively `docker-compose.production.yml`.
+The application consists of two containers:
+- `crudular-angular` - In development mode, this container serves the angular app. In production mode it builds the angular app, with the build artifacts being served by the Nginx container
+- `crudular-nginx` - This container is used only production mode. It serves the built angular app with Nginx.
+
+### Development build and deployment
+
+Run the following:
+
+```bash
+$ docker-compose build
+$ docker-compose up -d
+```
+
+Now open your browser at http://localhost:4200
+
+### Production build and deployment
+
+Run the following:
+
+```bash
+$ docker-compose -f docker-compose.production.yml build
+$ docker-compose -f docker-compose.production.yml up crudular-angular   # Wait until this container has finished building, as the nginx container is dependent on the production build artifacts
+$ docker-compose -f docker-compose.production.yml up -d crudular-nginx  # Start the nginx container in detached mode
+```
+
+Now open your browser at http://localhost:8080
 
 ## Running unit tests
 
