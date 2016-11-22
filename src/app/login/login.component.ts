@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { AuthenticationService } from '../shared/';
+import { AuthenticationService } from '../shared/authentication/authentication.service';
 
 /**
  * This class represents the lazy loaded LoginComponent.

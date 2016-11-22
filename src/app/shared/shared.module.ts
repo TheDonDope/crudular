@@ -24,6 +24,8 @@ import { NavigationModule } from './navigation/navigation.module';
     FormsModule,
     // @angular/router
     RouterModule,
+    // authentication/authentication.module
+    AuthenticationModule,
     // navigation/navigation.module
     NavigationModule
   ]

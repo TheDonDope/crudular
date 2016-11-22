@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { AuthenticationService } from '../shared/';
+import { AuthenticationService } from '../shared/authentication/authentication.service';
 
 /**
  * This class represents the lazy loaded HomeComponent.

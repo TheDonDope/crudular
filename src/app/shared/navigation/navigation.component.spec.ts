@@ -1,11 +1,29 @@
 /* tslint:disable:no-unused-variable */
 
-import { TestBed, async } from '@angular/core/testing';
+import { DebugElement } from '@angular/core';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { By } from '@angular/platform-browser';
+
 import { NavigationComponent } from './navigation.component';
 
-describe('Component: Navigation', () => {
-  it('should create an instance', () => {
-    let component = new NavigationComponent();
+describe('NavigationComponent', () => {
+  let component: NavigationComponent;
+  let fixture: ComponentFixture<NavigationComponent>;
+
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      declarations: [ NavigationComponent ]
+    })
+    .compileComponents();
+  }));
+
+  beforeEach(() => {
+    fixture = TestBed.createComponent(NavigationComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
+
+  it('should create', () => {
     expect(component).toBeTruthy();
   });
 });

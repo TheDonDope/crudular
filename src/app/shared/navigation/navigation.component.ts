@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { AuthenticationService } from '../authentication/';
+import { AuthenticationService } from '../authentication/authentication.service';
 
 /**
  * This class represents the navigation bar component.
@@ -14,13 +14,15 @@ export class NavigationComponent implements OnInit {
 
   /**
    * Creates a new NavigationComponent with the injected AuthenticationService.
-   * @param {AuthenticationService} authorisationService - The injected AuthenticationService.
+   * @param {AuthenticationService} authenticationService - The injected AuthenticationService.
    * @constructor
    */
   constructor(private authenticationService: AuthenticationService) { }
 
-  ngOnInit() {
-  }
+  /**
+   * Lifecycle hook which is called after the component has initialized.
+   */
+  ngOnInit() { }
 
   /**
    * Returns if a user is currently logged in.

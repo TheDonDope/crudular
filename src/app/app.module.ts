@@ -5,11 +5,11 @@ import { RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module';
 
 import { HomeModule } from './home/home.module';
 import { LoginModule } from './login/login.module';
 import { SharedModule } from './shared/shared.module';
-import { AppRoutingModule } from './app.routing';
 
 @NgModule({
   declarations: [AppComponent],
