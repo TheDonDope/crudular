@@ -4,7 +4,7 @@
 
 [![Angular Style Guide](https://mgechev.github.io/angular2-style-guide/images/badge.svg)](https://angular.io/styleguide)
 
-This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.19-3.
+This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.20-4.
 
 It uses the following npm packages (version numbers current as of 2016-10-10):
 
@@ -56,7 +56,7 @@ $ docker-compose build
 $ docker-compose up -d
 ```
 
-Now open your browser at http://localhost:4200
+Now open your browser at [http://localhost:4200](http://localhost:4200)
 
 ### Production build and deployment
 
@@ -68,7 +68,7 @@ $ docker-compose -f docker-compose.production.yml up crudular-angular   # Wait u
 $ docker-compose -f docker-compose.production.yml up -d crudular-nginx  # Start the nginx container in detached mode
 ```
 
-Now open your browser at http://localhost:8080
+Now open your browser at [http://localhost:8080](http://localhost:4200)
 
 ## Running unit tests
 
