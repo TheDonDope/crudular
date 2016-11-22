@@ -6,10 +6,10 @@
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.20-4.
 
-It uses the following npm packages (version numbers current as of 2016-10-10):
+It uses the following npm packages (version numbers current as of [2016-11-22](https://xkcd.com/1179/)):
 
 - [Bootstrap 4.0.0-alpha.4](https://www.npmjs.com/package/bootstrap): Used for the SCSS styling of the application
-- [Font-Awesome 4.6.3](https://www.npmjs.com/package/font-awesome): Used as the glyphicon font of the application
+- [Font-Awesome 4.7.0](https://www.npmjs.com/package/font-awesome): Used as the glyphicon font of the application
 - [Moment 2.15.1](https://www.npmjs.com/package/moment): Used for date/time manipulation *(Note: The npm package already includes the types for moment so you do not need to add it with `npm install @types/moment --save-dev`)*
 
 It follows the [Official Angular Styleguide](https://angular.io/styleguide).
