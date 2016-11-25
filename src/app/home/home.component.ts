@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
-import { AuthenticationService } from '../shared/authentication/authentication.service';
+import { AuthenticationService } from '../core/authentication/authentication.service';
 
 /**
- * This class represents the lazy loaded HomeComponent.
+ * This class provides the Home component of the application.
  */
 @Component({
   selector: 'cru-home',
@@ -24,7 +24,7 @@ export class HomeComponent implements OnInit {
   constructor(private authenticationService: AuthenticationService) { }
 
   /**
-   * Initialises the component.
+   * Lifecycle hook which is called after the component has initialized.
    */
   ngOnInit() {
     this.currentUser = JSON.parse(this.authenticationService.getCurrentUser());

@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 import { AuthenticationModule } from '../authentication/authentication.module';
-
 import { NavigationComponent } from './navigation.component';
 
 @NgModule({
