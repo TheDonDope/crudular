@@ -1,21 +1,19 @@
 import { CommonModule } from '@angular/common';
-import { NgModule, ModuleWithProviders } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
-import { AuthenticationModule } from './authentication/authentication.module';
-import { NavigationModule } from './navigation/navigation.module';
-
+/**
+ * The SharedModule provides all shared components, directives and pipes of the application.
+ */
 @NgModule({
   imports: [
     // @angular/common
     CommonModule,
+    // @angular/forms
+    FormsModule,
     // @angular/router
-    RouterModule,
-    // authentication/authentication.module
-    AuthenticationModule.forRoot(),
-    // navigation/navigation.module
-    NavigationModule
+    RouterModule
   ],
   exports: [
     // @angular/common
@@ -23,9 +21,7 @@ import { NavigationModule } from './navigation/navigation.module';
     // @angular/forms
     FormsModule,
     // @angular/router
-    RouterModule,
-    // navigation/navigation.module
-    NavigationModule
+    RouterModule
   ]
 })
 export class SharedModule { }

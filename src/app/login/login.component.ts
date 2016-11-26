@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { AuthenticationService } from '../shared/';
+import { AuthenticationService } from '../core/authentication/authentication.service';
 
 /**
- * This class represents the lazy loaded LoginComponent.
+ * This class provides the Login component of the application.
  */
 @Component({
   selector: 'cru-login',
@@ -26,7 +26,7 @@ export class LoginComponent implements OnInit {
   constructor(private router: Router, private authenticationService: AuthenticationService) { }
 
   /**
-   * Initialises the component and resets the login status.
+   * Lifecycle hook which is called after the component has initialized.
    */
   ngOnInit() {
     this.authenticationService.logout();
@@ -40,7 +40,7 @@ export class LoginComponent implements OnInit {
     this.authenticationService.login(this.user.username, this.user.password)
       .subscribe(result => {
         if (result === true) {
-          this.router.navigate(['/']);
+          this.router.navigate(['']);
         } else {
           this.error = 'Username or password is incorrect';
           this.loading = false;

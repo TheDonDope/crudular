@@ -1,16 +1,19 @@
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module';
 
+import { CoreModule } from './core/core.module';
 import { HomeModule } from './home/home.module';
 import { LoginModule } from './login/login.module';
 import { SharedModule } from './shared/shared.module';
-import { AppRoutingModule } from './app.routing';
 
+/**
+ * The AppModule provides the root module of the application. It imports all existing feature modules.
+ */
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -22,12 +25,14 @@ import { AppRoutingModule } from './app.routing';
     HttpModule,
     // app.routing
     AppRoutingModule,
-    // shared/shared.module
-    SharedModule,
+    // core/core.module
+    CoreModule,
     // home/home.module
     HomeModule,
     // login/login.module
-    LoginModule
+    LoginModule,
+    // shared/shared.module
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]

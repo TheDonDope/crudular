@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Router, CanActivate } from '@angular/router';
+import { CanActivate, Router } from '@angular/router';
 
 /**
  * This class implements a guard for routes that require successful authentication.
@@ -15,11 +15,10 @@ export class AuthenticationGuard implements CanActivate {
   constructor(private router: Router) { }
 
   /**
-   * To protect routes from being accessible without previous authentication,
-   * the `canActivate()` method checks if the LocalStorage contains a
-   * `currentUser`, which equates to a user being logged in. Only then the
-   * navigation will pass on to the requested route. Otherwise the user will be
-   * redirected to the login view.
+   * To protect routes from being accessible without previous authentication, the `canActivate()` method checks if the
+   * LocalStorage contains a `currentUser`, which equates to a user being logged in. Only then the navigation will pass
+   * on to the requested route. Otherwise the user will be redirected to the login view.
+   * @return {boolean} `true` if a user is currently logged in, otherwise `false`.
    */
   canActivate() {
     if (localStorage.getItem('currentUser')) {

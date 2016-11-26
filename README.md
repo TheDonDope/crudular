@@ -4,13 +4,13 @@
 
 [![Angular Style Guide](https://mgechev.github.io/angular2-style-guide/images/badge.svg)](https://angular.io/styleguide)
 
-This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.19-3.
+This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.21.
 
-It uses the following npm packages (version numbers current as of 2016-10-10):
+It uses the following npm packages (version numbers current as of [2016-11-22](https://xkcd.com/1179/)):
 
-- [Bootstrap 4.0.0-alpha.4](https://www.npmjs.com/package/bootstrap): Used for the SCSS styling of the application
-- [Font-Awesome 4.6.3](https://www.npmjs.com/package/font-awesome): Used as the glyphicon font of the application
-- [Moment 2.15.1](https://www.npmjs.com/package/moment): Used for date/time manipulation *(Note: The npm package already includes the types for moment so you do not need to add it with `npm install @types/moment --save-dev`)*
+- [Bootstrap 4.0.0-alpha.5](https://www.npmjs.com/package/bootstrap): Used for the SCSS styling of the application
+- [Font-Awesome 4.7.0](https://www.npmjs.com/package/font-awesome): Used as the glyphicon font of the application
+- [Moment 2.17.0](https://www.npmjs.com/package/moment): Used for date/time manipulation *(Note: The npm package already includes the types for moment so you do not need to add it with `npm install @types/moment --save-dev`)*
 
 It follows the [Official Angular Styleguide](https://angular.io/styleguide).
 
@@ -56,7 +56,7 @@ $ docker-compose build
 $ docker-compose up -d
 ```
 
-Now open your browser at http://localhost:4200
+Now open your browser at [http://localhost:4200](http://localhost:4200)
 
 ### Production build and deployment
 
@@ -68,7 +68,7 @@ $ docker-compose -f docker-compose.production.yml up crudular-angular   # Wait u
 $ docker-compose -f docker-compose.production.yml up -d crudular-nginx  # Start the nginx container in detached mode
 ```
 
-Now open your browser at http://localhost:8080
+Now open your browser at [http://localhost:8080](http://localhost:4200)
 
 ## Running unit tests
 
