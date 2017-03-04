@@ -6,7 +6,7 @@ services:
     build:
       context: .
       dockerfile: ./.docker/crudular-angular.production.dockerfile
-    command: ng build --prod
+    command: ng build -prod
     container_name: crudular-angular-build-prod
     image: crudular-angular
     networks:

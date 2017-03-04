@@ -15,7 +15,9 @@ import { AppComponent } from './app.component';
  * application specific modules `CoreModule`, `SharedModule` and all feature modules.
  */
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [
+    AppComponent
+  ],
   imports: [
     // @angular/platform-browser
     BrowserModule,

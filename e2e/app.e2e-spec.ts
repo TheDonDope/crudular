@@ -1,6 +1,6 @@
 import { CrudularPage } from './app.po';
 
-describe('crudular App', function() {
+describe('crudular App', () => {
   let page: CrudularPage;
 
   beforeEach(() => {

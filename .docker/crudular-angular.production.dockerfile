@@ -7,7 +7,7 @@ RUN useradd --user-group --create-home --shell /bin/false app
 ENV HOME=/home/app
 WORKDIR $HOME
 
-RUN npm cache clean && npm install -g angular-cli
+RUN npm cache clean && npm install -g @angular/cli
 
 ENV APP_NAME=crudular
 
