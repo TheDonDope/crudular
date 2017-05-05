@@ -6,7 +6,7 @@
     <div class="alert alert-danger" role="alert" [hidden]="!canShowLoginFailedMessage">
         {{ loginFailedMessage }}
     </div>
-    <form (ngSubmit)="login()" #loginForm="ngForm">
+    <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
       <fieldset class="form-group">
         <label class="form-control-label" for="username">Username</label>
         <div class="input-group">
