@@ -7,8 +7,8 @@ describe('crudular App', () => {
     page = new CrudularPage();
   });
 
-  it('should display message saying app works', () => {
+  it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('cru works!');
+    expect(page.getParagraphText()).toEqual('Welcome to cru!!');
   });
 });
