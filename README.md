@@ -4,6 +4,8 @@
 
 [![Angular Style Guide](https://mgechev.github.io/angular2-style-guide/images/badge.svg)](https://angular.io/styleguide)
 
+[![Build Status](https://travis-ci.org/TheDonDope/crudular.svg?branch=develop)](https://travis-ci.org/TheDonDope/crudular)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.1.1.
 
 It uses the following npm packages (version numbers current as of [2017-03-04](https://xkcd.com/1179/)):
