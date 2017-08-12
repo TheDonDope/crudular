@@ -6,7 +6,7 @@
 
 [![Build Status](https://travis-ci.org/TheDonDope/crudular.svg?branch=develop)](https://travis-ci.org/TheDonDope/crudular)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.1.1.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.3.0.
 
 It uses the following npm packages (version numbers current as of [2017-03-04](https://xkcd.com/1179/)):
 
@@ -32,7 +32,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 ## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class/module`.
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
 ## Build
 
