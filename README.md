@@ -2,8 +2,7 @@
 
 # Crudular
 
-[![Angular Style Guide](https://mgechev.github.io/angular2-style-guide/images/badge.svg)](https://angular.io/styleguide)
-
+[![Angular Style Guide](https://mgechev.github.io/angular2-style-guide/images/badge.svg)](https://angular.io/styleguide) [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org) 
 [![Build Status](https://travis-ci.org/TheDonDope/crudular.svg?branch=develop)](https://travis-ci.org/TheDonDope/crudular)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.3.0.
