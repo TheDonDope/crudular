@@ -13,7 +13,7 @@ import { AuthenticationGuard } from './authentication.guard';
 export class AuthenticationModule {
   /**
    * Returns the wrapped AuthenticationModule also containing the providers.
-   * @return {ModuleWithProviders} The wrapped AuthenticationModule.
+   * @return The wrapped AuthenticationModule.
    */
   static forRoot(): ModuleWithProviders<AuthenticationModule> {
     return {
