@@ -1,116 +1,105 @@
-![Crudular](crudular.png)
 
-# Crudular
 
-[![Angular Style Guide](https://mgechev.github.io/angular2-style-guide/images/badge.svg)](https://angular.io/styleguide) [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org) 
-[![Build Status](https://travis-ci.org/TheDonDope/crudular.svg?branch=develop)](https://travis-ci.org/TheDonDope/crudular)
+# Crud
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.3.
+This project was generated using [Nx](https://nx.dev).
 
-It uses the following npm packages (version numbers current as of [2017-03-04](https://xkcd.com/1179/)):
+<p style="text-align: center;"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="450"></p>
 
-- [Bootstrap 4.0.0-alpha.6](https://www.npmjs.com/package/bootstrap): Used for the SCSS styling of the application
-- [Font-Awesome 4.7.0](https://www.npmjs.com/package/font-awesome): Used as the glyphicon font of the application
-- [Moment 2.17.0](https://www.npmjs.com/package/moment): Used for date/time manipulation *(Note: The npm package already includes the types for moment so you do not need to add it with `npm install @types/moment --save-dev`)*
+🔎 **Smart, Fast and Extensible Build System**
 
-It follows the [Official Angular Styleguide](https://angular.io/styleguide).
+## Quick Start & Documentation
 
-## Features
+[Nx Documentation](https://nx.dev/angular)
 
-The application provides the following features:
+[10-minute video showing all Nx features](https://nx.dev/getting-started/intro)
 
-- Provide a login view to authenticate with a remote api
-- Manage a JWT authenticity token to use for calls of protected remote api methods
-- Provide a home view showing the user information about his JWT token
-- Provide a dynamic authentication-based navigation
-- Provides full Docker support for both development and production environment
+[Interactive Tutorial](https://nx.dev/react-tutorial/01-create-application)
+
+## Adding capabilities to your workspace
+
+Nx supports many plugins which add capabilities for developing different types of applications and different tools.
+
+These capabilities include generating applications, libraries, etc as well as the devtools to test, and build projects as well.
+
+Below are our core plugins:
+
+- [Angular](https://angular.io)
+  - `ng add @nrwl/angular`
+- [React](https://reactjs.org)
+  - `ng add @nrwl/react`
+- Web (no framework frontends)
+  - `ng add @nrwl/web`
+- [Nest](https://nestjs.com)
+  - `ng add @nrwl/nest`
+- [Express](https://expressjs.com)
+  - `ng add @nrwl/express`
+- [Node](https://nodejs.org)
+  - `ng add @nrwl/node`
+
+There are also many [community plugins](https://nx.dev/community) you could add.
+
+## Generate an application
+
+Run `ng g @nrwl/angular:app my-app` to generate an application.
+
+> You can use any of the plugins above to generate applications as well.
+
+When using Nx, you can create multiple applications and libraries in the same workspace.
+
+## Generate a library
+
+Run `ng g @nrwl/angular:lib my-lib` to generate a library.
+
+> You can also use any of the plugins above to generate libraries as well.
+
+Libraries are shareable across libraries and applications. They can be imported from `@crud/mylib`.
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `ng serve my-app` for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Run `ng g component my-component --project=my-app` to generate a new component.
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-## Dockerization
-
-The application provides full Docker support. You can use it for both development as well as production builds and deployments.
-
-### How to build and start the dockerized version of the application 
-
-The Dockerization infrastructure is described in the `docker-compose.yml` (respectively `docker-compose.production.yml`.
-The application consists of two containers:
-- `crudular-angular` - In development mode, this container serves the angular app. In production mode it builds the angular app, with the build artifacts being served by the Nginx container
-- `crudular-nginx` - This container is used only production mode. It serves the built angular app with Nginx.
-
-### Development build and deployment
-
-Run the following:
-
-```bash
-$ docker-compose build
-$ docker-compose up -d
-```
-
-Now open your browser at [http://localhost:4200](http://localhost:4200)
-
-### Production build and deployment
-
-Run the following:
-
-```bash
-$ docker-compose -f docker-compose.production.yml build
-$ docker-compose -f docker-compose.production.yml up crudular-angular   # Wait until this container has finished building, as the nginx container is dependent on the production build artifacts
-$ docker-compose -f docker-compose.production.yml up -d crudular-nginx  # Start the nginx container in detached mode
-```
-
-Now open your browser at [http://localhost:8080](http://localhost:4200)
+Run `ng build my-app` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
 ## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Run `ng test my-app` to execute the unit tests via [Jest](https://jestjs.io).
+
+Run `nx affected:test` to execute the unit tests affected by a change.
 
 ## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Run `ng e2e my-app` to execute the end-to-end tests via [Cypress](https://www.cypress.io).
 
-## Commit Message Format
+Run `nx affected:e2e` to execute the end-to-end tests affected by a change.
 
-This project follows the [angular commit-message convention](https://github.com/conventional-changelog/conventional-changelog-angular/blob/master/convention.md).
+## Understand your workspace
 
-## Versioning
-
-This project follows the [Semantic Versioning 2.0.0](http://semver.org/) specification.
-
-## Bumping Version Number
-
-If you follow semantic versioning and use the [angular commit-message convention](https://github.com/conventional-changelog/conventional-changelog-angular/blob/master/convention.md), you can use the following npm task to get the appropiate next version number
-
-```bash
-$ npm run bump-version
-```
-
-## Releasing
-
-You can use the following workflow to ease your release process:
-
-*Note: The following scripts use the npm-packages [conventional-github-releaser](https://github.com/conventional-changelog/conventional-github-releaser), [conventional-recommended-bump](https://github.com/conventional-changelog/conventional-recommended-bump) and [standard-changelog](https://github.com/conventional-changelog/standard-changelog). Make sure you install them first by running: `npm install -g conventional-github-releaser conventional-recommended-bump standard-changelog`. Furthermore, [gitflow](https://github.com/nvie/gitflow) is partially used for the following commands*
-
-0. Given your project was initialized with `$ git flow init` and your current branch being `develop` is ready to be released, do the following
-1. Get your next-version number:`$ npm run bump-version`
-2. Start your next-release: `$ git flow release start <next-version-from-step-1>`
-3. Bump the version number in your `package.json` with the version from step 1
-4. Generate your `CHANGELOG.md`: `$ npm run changelog`
-5. Make your release commit: `$ git add --all && git commit -m 'chore(release): <next-version-from-step-1>'`
-6. Finish your release: `$ git flow release finish <next-version-from-step-1>`
-7. Push your branches and tags to GitHub: `$ git push origin master && git push origin develop && git push origin --tags`
-8. Draft and publish your GitHub Relase: `$ npm run github-release`
+Run `nx graph` to see a diagram of the dependencies of your projects.
 
 ## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Visit the [Nx Documentation](https://nx.dev/angular) to learn more.
+
+
+
+
+
+
+## ☁ Nx Cloud
+
+### Distributed Computation Caching & Distributed Task Execution
+
+<p style="text-align: center;"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-cloud-card.png"></p>
+
+Nx Cloud pairs with Nx in order to enable you to build and test code more rapidly, by up to 10 times. Even teams that are new to Nx can connect to Nx Cloud and start saving time instantly.
+
+Teams using Nx gain the advantage of building full-stack applications with their preferred framework alongside Nx’s advanced code generation and project dependency graph, plus a unified experience for both frontend and backend developers.
+
+Visit [Nx Cloud](https://nx.app/) to learn more.

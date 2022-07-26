@@ -1,0 +1,11 @@
+# pack-refs with: peeled fully-peeled sorted 
+c488dd04440cf01bffdb43964de72481d6657afa refs/remotes/origin/dependabot/npm_and_yarn/angular/core-11.0.5
+b2df7011cc559211dc95b5a6b15ad281ebb63afa refs/remotes/origin/dependabot/npm_and_yarn/moment-2.29.4
+e7c1e67c4b5847081e3076083dac77aadfc3283c refs/remotes/origin/main
+5bff53bed6ca4fc013f9908d93663ebf859bf4fb refs/tags/v1.0.0
+^86e7fedb73d6946c8d5bb4c7a0b60a4d05793c1b
+3c75e18007c1619350c1ee4d6f2723d46e68d9ab refs/tags/v1.1.0
+^d6e4a9153d19c400951c207248e093144597ad37
+89da928555e1e8d65880155d4f3de06be1baf494 refs/tags/v1.2.0
+^f834ff9f28dd97956c585ff8faa5c288739c67a4
+a963322bb004f5123f7e8758d371ab10a268c1af refs/tags/v8.0.0
