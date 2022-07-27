@@ -84,6 +84,26 @@
         "jestConfig": "apps/crudular/jest.config.ts",
         "passWithNoTests": true
       }
+    },
+    "version": {
+      "executor": "@jscutlery/semver:version",
+      "options": {
+        "preset": "conventional"
+      }
+    },
+    "next-version": {
+      "executor": "@jscutlery/semver:version",
+      "options": {
+        "preset": "conventional",
+        "dryRun": true
+      }
+    },
+    "push-version": {
+      "executor": "@jscutlery/semver:version",
+      "options": {
+        "preset": "conventional",
+        "push": true
+      }
     }
   },
   "tags": []

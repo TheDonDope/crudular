@@ -9,6 +9,12 @@
       "options": {
         "lintFilePatterns": ["libs/api-interfaces/**/*.ts"]
       }
+    },
+    "version": {
+      "executor": "@jscutlery/semver:version",
+      "options": {
+        "preset": "conventional"
+      }
     }
   },
   "tags": []

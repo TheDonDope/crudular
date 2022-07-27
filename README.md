@@ -1,5 +1,3 @@
-
-
 # Crud
 
 This project was generated using [Nx](https://nx.dev).
@@ -83,14 +81,15 @@ Run `nx affected:e2e` to execute the end-to-end tests affected by a change.
 
 Run `nx graph` to see a diagram of the dependencies of your projects.
 
+## Semantic Version
+
+Run `nx run crudular:next-version` to display information about the next semantic version to be set.
+
+Run `nx run crudular:push-version` to create a new semantic git version tag and update the [CHANGELOG.md](./apps/wit/CHANGELOG.md) and push them to the remote repository.
+
 ## Further help
 
 Visit the [Nx Documentation](https://nx.dev/angular) to learn more.
-
-
-
-
-
 
 ## ☁ Nx Cloud
 
