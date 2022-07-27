@@ -5,9 +5,9 @@
   "scripts": {
     "ng": "nx",
     "postinstall": "node ./decorate-angular-cli.js && ngcc --properties es2020 browser module main",
-    "start": "nx run-many --target serve --all",
-    "build": "nx run-many --target build --all",
-    "test": "nx run-many --target test --all"
+    "start": "nx run-many --all --target serve",
+    "build": "nx run-many --all --target build",
+    "test": "nx run-many --all --target test"
   },
   "private": true,
   "dependencies": {
